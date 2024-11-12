@@ -1,353 +1,221 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* General reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
 }
 
-a {
-    text-decoration: none;
-    color: #0077cc;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header Styles */
+/* Header / Navbar styles */
 header {
-    background-color: #0077cc;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-header .logo h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header .logo p {
-    margin: 10px 0 0;
-    font-size: 1.2rem;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* Hero Section */
-.hero {
-    background: url('imges/logo.webp') no-repeat center center;
-    background-size: cover;
+    background-color: #333;
     color: white;
-    text-align: center;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navbar .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+}
+
+.hero {
+    background: url('imges/logo.webp') no-repeat center center/cover;
     padding: 100px 20px;
+    text-align: center;
+    color: white;
 }
 
-.hero h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.5rem;
+.hero-content h2 {
+    font-size: 40px;
     margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
 .cta-button {
-    padding: 10px 20px;
-    background-color: #0077cc;
+    background-color: #4CAF50;
     color: white;
-    font-size: 1.2rem;
-    border: none;
+    padding: 15px 30px;
+    text-decoration: none;
     border-radius: 5px;
+    font-size: 18px;
 }
 
-.cta-button:hover {
-    background-color: #005fa3;
-}
-
-/* Articles Section */
-.articles {
-    padding: 50px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.article-list {
+/* Features Section */
+.features {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
-    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
-}
-
-article {
-    width: 30%;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-image: url('https://via.placeholder.com/400x200?text=Article+Image');
-    background-size: cover;
-    background-position: center center;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 20px; /* Adds space between articles */
-}
-
-article h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-article p {
-    font-size: 1rem;
-}
-
-article a {
-    color: #fff;
-    font-weight: bold;
-}
-
-article:hover {
-    opacity: 0.9;
-}
-
-/* Guides Section */
-.guides {
     padding: 50px 20px;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
 }
 
-.guide-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
-}
-
-.guide-item {
+.feature {
     width: 30%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-image: url('https://via.placeholder.com/400x200?text=Guide+Image');
-    background-size: cover;
-    background-position: center center;
-    color: #fff;
     text-align: center;
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
-.guides .guide-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-/* Tools Section */
-.tools {
-    padding: 50px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.tool-list {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
-}
-
-.tool-item {
-    width: 30%;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-image: url('https://via.placeholder.com/400x200?text=Tool+Image');
-    background-size: cover;
-    background-position: center center;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.tools .tool-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+.about p {
+    font-size: 18px;
 }
 
 /* Contact Section */
 .contact {
     padding: 50px 20px;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
     text-align: center;
 }
 
-form {
-    width: 50%;
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    max-width: 600px;
     margin: 0 auto;
 }
 
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input, form textarea {
+.contact input, .contact textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-form button {
-    background-color: #0077cc;
+.contact button {
+    background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-form button:hover {
-    background-color: #005fa3;
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
+    text-align: center;
+    padding: 20px;
     background-color: #333;
     color: white;
-    padding: 20px;
-    text-align: center;
 }
 
-footer a {
-    color: #fff;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Styles (Mobile First) */
-
-/* Mobile Styles */
-@media (max-width: 767px) {
-    header .logo h1 {
-        font-size: 2rem;
-    }
-
-    nav ul {
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
         flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding-top: 10px;
+        z-index: 1;
     }
 
-    nav ul li {
-        margin: 10px 0;
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
     }
 
     .hero h2 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
+        font-size: 28px;
     }
 
     .cta-button {
-        font-size: 1rem;
+        font-size: 16px;
     }
 
-    .article-list, .guide-list, .tool-list {
+    .features {
         flex-direction: column;
         align-items: center;
     }
 
-    article, .guide-item, .tool-item {
+    .feature {
         width: 80%;
         margin-bottom: 20px;
     }
-
-    .guides, .tools {
-        padding: 30px 20px;
-    }
-
-    form {
-        width: 80%;
-    }
 }
 
-/* Tablet Styles */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .hero h2 {
-        font-size: 2.8rem;
-    }
-
-    .hero p {
-        font-size: 1.3rem;
-    }
-
-    .cta-button {
-        font-size: 1.1rem;
-    }
-
-    .article-list, .guide-list, .tool-list {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    article, .guide-item, .tool-item {
-        width: 45%;
-    }
-
-    .contact form {
-        width: 60%;
-    }
-}
-
-/* Desktop Styles */
-@media (min-width: 1025px) {
-    .hero h2 {
-        font-size: 3rem;
-    }
-
-    .hero p {
-        font-size: 1.5rem;
-    }
-
-    .cta-button {
-        font-size: 1.2rem;
-    }
-
-    .article-list, .guide-list, .tool-list {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    article, .guide-item, .tool-item {
-        width: 30%;
-    }
-
-    .contact form {
-        width: 50%;
-    }
+.nav-links.active {
+    display: flex;
 }
