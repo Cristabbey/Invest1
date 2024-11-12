@@ -29,6 +29,12 @@ header {
 
 header .logo h1 {
     margin: 0;
+    font-size: 2.5rem;
+}
+
+header .logo p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
 }
 
 nav ul {
@@ -90,6 +96,7 @@ nav ul li a {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
 }
 
 article {
@@ -98,6 +105,12 @@ article {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url('https://via.placeholder.com/400x200?text=Article+Image');
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px; /* Adds space between articles */
 }
 
 article h3 {
@@ -110,7 +123,12 @@ article p {
 }
 
 article a {
-    color: #0077cc;
+    color: #fff;
+    font-weight: bold;
+}
+
+article:hover {
+    opacity: 0.9;
 }
 
 /* Guides Section */
@@ -122,6 +140,7 @@ article a {
 .guide-list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
 }
 
 .guide-item {
@@ -130,6 +149,17 @@ article a {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url('https://via.placeholder.com/400x200?text=Guide+Image');
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.guides .guide-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
 /* Tools Section */
@@ -143,6 +173,7 @@ article a {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
 }
 
 .tool-item {
@@ -151,6 +182,17 @@ article a {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url('https://via.placeholder.com/400x200?text=Tool+Image');
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tools .tool-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
 /* Contact Section */
@@ -180,4 +222,132 @@ form input, form textarea {
 
 form button {
     background-color: #0077cc;
-   
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #005fa3;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles (Mobile First) */
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    header .logo h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+    }
+
+    .article-list, .guide-list, .tool-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article, .guide-item, .tool-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .guides, .tools {
+        padding: 30px 20px;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero h2 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    .cta-button {
+        font-size: 1.1rem;
+    }
+
+    .article-list, .guide-list, .tool-list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    article, .guide-item, .tool-item {
+        width: 45%;
+    }
+
+    .contact form {
+        width: 60%;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    .hero h2 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+    }
+
+    .article-list, .guide-list, .tool-list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    article, .guide-item, .tool-item {
+        width: 30%;
+    }
+
+    .contact form {
+        width: 50%;
+    }
+}
